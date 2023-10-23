@@ -1,1 +1,3 @@
 # CSE134A
+# XuanXuan Pan
+# A12406139
