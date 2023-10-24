@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Here is Me, Cyan Pan</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  </head>
+
+  <body>
+    <main>
+        <template>
+            <p>This is the hidden paragraph unless you inpect it in developer tool.
+                If you do see this, you will have a wonderful day.
+            </p>
+        </template>
+
+        <nav id="menu">
+            <ol>
+              <li><a class="menu_item" href="index.html">Home</a> </li>
+              <li><a class="menu_item" href="view_works.html">View Works</a> </li>
+              <li><a class="menu_item" href="bio.html">Bio</a> </li>
+              <li><a class="menu_item" href="skills.html">Skill/Experience</a> </li>
+              <li><a class="menu_item" href="contact.html">Contact</a></li>
+            </ol>
+        </nav>
+
+        <picture>
+            <img src="me.png" alt="me.gif">
+        </picture>
+
+        <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" stroke="black" stroke-width="2" fill="red" />
+        </svg>
+
+        <section id="bio_introduction">
+
+            <canvas id="myCanvas"></canvas>
+            <script>
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                ctx.fillText("Hello World", 10, 50);
+            </script>
+
+            <header><p>Introducing - Cyan Pan</p></header>
+
+            <p>Hello dear reader,<br>
+               My name is XuanXuan Pan(Cyan). I am studying CSE 134B in <i>UCSD</i> now. This is my <span style="color:cyan">first</span> website I will design for myself.
+               When it comes to Web design, I believe that commuication is the key to <b>success</b>. <br>For the section below, please allow me to play a wonderful piano song for you. </p>
+
+               <audio controls>
+                <source src="Mozart.mp3" type="audio/mpeg">
+               </audio>
+               <hr>
+               <br>
+               <pre>Now with the beautiful piano music, we    can continue this journey!</pre>
+
+               <p>So let's talk about what I like the most. I like eating very much. I believe a happy stomach can definely increase productivity. My dream is to travel around the world
+                and try different kinds of food. <br>
+                And my faverite food is Chinese food. Espectially spicy food. I <b>LOVE</b> spicy food.
+            </p>
+
+            <aside>
+                <p>China has a lot of food that is not spicy and delicious as well!</p>
+            </aside>
+            
+            <p> Now what about the foods I do not like? I will give you a list:</p>
+            <ul>
+                <li>Shitake Mushroom</li>
+                <li>Shitake Mushroom</li>
+                <li>Shitake Mushroom</li>
+            </ul>
+
+            <br>
+
+            <p>Also let me show you my favorite artist:</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=HauE3C_yl7c"></iframe>
+
+            <br><br>
+
+            <p> And my <em>favorite</em> fruit!!</p>
+            <video width="320" height="240" controls>
+                <source src="banana.mp4" type="video/mp4">  
+              </video>
+
+        </section>
+
+        <br>
+        <h1> I will <b>NEVER</b> give up on my <strong>Dreams</strong>.</h1>
+        <h2>I am Cyan Pan.</h2>
+        <h3> Welcome...</h3> 
+        <footer> <p>Author: XuanXuan Pan</p></footer>
+    </main>
+  </body>
+</html>
