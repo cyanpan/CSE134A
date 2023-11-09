@@ -331,11 +331,19 @@ section:has(p){
     }
 
     /* Skill Set section */
-    #skill_set{
+    /* #skill_set{
         font-size: 20px;
     }
     #skill_set_header{
         font-size: 24px;
+    } */
+
+    /* Nested CSS rules */
+    #skill_set{
+        font-size: 20px;
+        & > p{
+            font-size: 24px;
+        }
     }
 
      /* Contact CSS */
