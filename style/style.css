@@ -91,7 +91,7 @@ h1, h2, h3{
 #bottom_container{
     position: absolute;
     width: 50dvw;
-    min-height: 30dvh;
+    min-height: 30vh;
     bottom:0;
     right:0;
 }
@@ -226,7 +226,7 @@ section:has(p){
     #bio_introduction{
         display: grid;
         grid-template-rows: 346px 346px 96px 346px 346px;
-        grid-template-columns: repeat(5, 19dvw);
+        grid-template-columns: repeat(5, 19vw);
     }
     #piano{
         width: 40dvw;
@@ -236,8 +236,8 @@ section:has(p){
     /* View work section */
     #team_work{
         display: grid;
-        grid-template-rows: repeat(5, 19dvh);
-        grid-template-columns: repeat(5, 19dvw);
+        grid-template-rows: repeat(5, 19vh);
+        grid-template-columns: repeat(5, 19vw);
         color: var(--color-white, white);
         margin: 0 auto;
     }
@@ -305,15 +305,15 @@ section:has(p){
     }
     #bio_introduction{
         display: grid;
-        grid-template-rows: 18dvw 18dvw 5dvw 18dvw 18dvw;
-        grid-template-columns: repeat(5, 19dvw);
+        grid-template-rows: 18vw 18vw 5vw 18vw 18vw;
+        grid-template-columns: repeat(5, 19vw);
     }
 
     /* ViewWork CSS */
     #team_work{
         display: grid;
-        grid-template-rows: repeat(5, 19dvh);
-        grid-template-columns: repeat(5, 19dvw);
+        grid-template-rows: repeat(5, 19vh);
+        grid-template-columns: repeat(5, 19vw);
         color: var(--color-white, white);
         margin: 0 auto;
     }
@@ -360,8 +360,8 @@ section:has(p){
     }
     #bio_introduction{
         display: grid;
-        grid-template-rows: 18dvh 18dvh 5dvh 18dvw 18dvh;
-        grid-template-columns: repeat(5, 19dvw);
+        grid-template-rows: 18vh 18vh 5vh 18vh 18vh;
+        grid-template-columns: repeat(5, 19vw);
     }
     #piano {
         width: 50dvw;
@@ -377,8 +377,8 @@ section:has(p){
     /* ViewWork CSS */
     #team_work{
         display: grid;
-        grid-template-rows: repeat(5, 20dvw);
-        grid-template-columns: repeat(5, 20dvw);
+        grid-template-rows: repeat(5, 20vw);
+        grid-template-columns: repeat(5, 20vw);
         color: var(--color-white, white);
         margin: 0 auto;
     }
