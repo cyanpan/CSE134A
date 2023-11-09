@@ -361,7 +361,8 @@ section:has(p){
     #bio_introduction{
         display: grid;
         grid-template-rows: 18vh 18vh 5vh 18vh 18vh;
-        grid-template-columns: repeat(5, 19vw);
+        /* grid-template-columns: repeat(5, 19vw); */
+        grid-template-columns: auto auto auto;
     }
     #piano {
         width: 50dvw;
