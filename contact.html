@@ -6,23 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Here is Me, Cyan Pan</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-
+    <link rel="stylesheet" href="style/style.css" type="text/css">
   </head>
 
   <body>
-    <main>
 
-        <nav id="menu">
-            <ol>
-              <li><a class="menu_item" href="index.html">Home</a> </li>
-              <li><a class="menu_item" href="view_works.html">View Works</a> </li>
-              <li><a class="menu_item" href="bio.html">Bio</a> </li>
-              <li><a class="menu_item" href="skills.html">Skill/Experience</a> </li>
-              <li><a class="menu_item" href="contact.html">Contact</a></li>
-            </ol>
+      <section id = "wrapper">
+        <nav>
+          <ul>
+            <li><a class="menu_item" href="index.html">Home</a> </li>
+            <li><a class="menu_item" href="view_works.html">View Works</a> </li>
+            <li><a class="menu_item" href="bio.html">Bio</a> </li>
+            <li><a class="menu_item" href="skills.html">Skill/Experience</a> </li>
+            <li><a class="menu_item" href="contact.html">Contact</a></li>
+          </ul>
         </nav>
+      </section>
 
-        <div>
+        <div id="contact_form">
             <p>Please feel free to contact me! Fill out the <code>form</code> below!</p>
             <br>
 
@@ -31,12 +32,13 @@
                     <legend>Your Information</legend>
                     <label for="fname"> First Name:</label>
                     <input type="text" id="fname" name="fname">
+                    <br>
                     <label for="lname"> Last Name:</label>
                     <input type="text" id="lname" name="lname">
                 </fieldset>
 
                 <p><label for="message">Message Input: </label></p>
-                <textarea id="message" name="message" rows="4" cols="50"></textarea>
+                <textarea id="message" name="message" rows="4" cols="50"> </textarea>
                 <br>
                 <input type="submit" value="Send">
                 <button type="button">Reset</button>
@@ -46,7 +48,7 @@
 
         <br>
 
-        <section>
+        <section id="feed_back_form">
             <p>Please provide a short feedback for this current website!</p>
             <label for="feedback">I found this website to be </label>
             <input list="feedbacks" name="feedback" id="feedback">
@@ -60,10 +62,6 @@
         </section>
 
         <br>
-        <h1> I will <b>NEVER</b> give up on my <strong>Dreams</strong>.</h1>
-        <h2>I am Cyan Pan.</h2>
-        <h3> Welcome...</h3> 
-        <footer> <p>Author: XuanXuan Pan</p></footer>
-    </main>
+          
   </body>
 </html>

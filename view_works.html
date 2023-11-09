@@ -6,66 +6,64 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Here is Me, Cyan Pan</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-
+    <link rel="stylesheet" href="style/style.css" type="text/css">
   </head>
 
   <body>
-    <main>
-
-        <nav id="menu">
-            <ol>
-              <li><a class="menu_item" href="index.html">Home</a> </li>
-              <li><a class="menu_item" href="view_works.html">View Works</a> </li>
-              <li><a class="menu_item" href="bio.html">Bio</a> </li>
-              <li><a class="menu_item" href="skills.html">Skill/Experience</a> </li>
-              <li><a class="menu_item" href="contact.html">Contact</a></li>
-            </ol>
+      <section id = "wrapper">
+        <nav>
+          <ul>
+            <li><a class="menu_item" href="index.html">Home</a> </li>
+            <li><a class="menu_item" href="view_works.html">View Works</a> </li>
+            <li><a class="menu_item" href="bio.html">Bio</a> </li>
+            <li><a class="menu_item" href="skills.html">Skill/Experience</a> </li>
+            <li><a class="menu_item" href="contact.html">Contact</a></li>
+          </ul>
         </nav>
+      </section>
 
-        <figure>
-            <img src="teamwork.jpg">
-            <figcaption>Teamwork Makes Dream Work</figcaption>
-        </figure>
+      <div id="team_work">
+        <picture id="teamwork_pic">
+          <source srcset = "teamwork-small.jpg" type = "image/jpeg" media = "(max-width: 600px)">
+          <source srcset = "teamwork.jpg" type = "image/jpeg" media = "(min-width: 1280px)">
+          <source srcset = "teamwork-medium.jpg" type = "image/jpeg" media = "(max-width: 1279px)">
+          <img src="teamwork.jpg" alt = "A picture of hands holding together">
+        </picture>
 
-        <form>
-            <label for="years">Choose a Year to List Projects:</label>
-            <select name="years" id="years">
-              <optgroup label="Years">
-                <option value="2023">2023</option>
-                <option value="2022">2022</option>
-                <option value="2021">2021</option>
-                <option value="2020">2020</option>
-            </select>
+        <form id="select_form">
+          <label for="years">Choose a Year to list:</label>
+          <select name="years" id="years">
+            <optgroup label="Years">
+              <option value="2023">2023</option>
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+              <option value="2020">2020</option>
+          </select>
 
-            <br><br>
-            <input type="submit" value="Submit Year">
-          </form>
+          <br>
+          <input id="select_submit" type="submit" value="Submit Year">
+        </form>
 
-          <div>
-            <table>
-                <caption>My Previous Team Member</caption>
-                <colgroup>
-                    <col span="3">
-                </colgroup>
+          <table id="result_table">
+              <caption>My Previous Team Member</caption>
+              <colgroup>
+                  <col span="3">
+              </colgroup>
 
-                <tr>
-                  <th>FrontEnd</th>
-                  <th>BackEnd</th>
-                  <th>Manager</th>
-                </tr>
-                <tr>
-                  <td>Amel</td>
-                  <td>Leo</td>
-                  <td>Jade</td>
-                </tr>
-              </table>
-          </div>
+              <tr id="table_header">
+                <th>FrontEnd</th>
+                <th>BackEnd</th>
+                <th>Manager</th>
+              </tr>
+              <tr>
+                <td>Amel</td>
+                <td>Leo</td>
+                <td>Jade</td>
+              </tr>
+            </table>
 
-        <br>
-        <h1> I will <b>NEVER</b> give up on my <strong>Dreams</strong>.</h1>
-        <h2>I am Cyan Pan.</h2>
-        <h3> Welcome...</h3> 
-        <footer> <p>Author: XuanXuan Pan</p></footer>
-    </main>
+      </div>
+      
+            
   </body>
 </html>

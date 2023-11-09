@@ -1,0 +1,406 @@
+/* Defining custom fonts and animation keyframes */
+@font-face {
+    font-family: 'Branda';
+    src: url('Branda-yolq.ttf') format('truetype');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Tomatoes';
+    src: url('Tomatoes-O8L8.ttf') format('truetype');
+}
+@keyframes float {
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
+:root{
+    --menu-text: orange;
+    --color-white: white;
+    --color-black: black;
+    --color-silver: silver;
+    --color-lemon: #FFFACD;
+    --color-blue: #4B0082;
+    --color-yellow: yellow;
+    --color-darkgrey: #696969;
+    --color-cyan: cyan;
+
+}
+
+body, #menu_body{
+    position:relative;
+    margin: 0;
+    padding: 0;
+    min-height: 90dvh;
+    background-color: var(--color-black, black);
+    /* background-image: url('../webdesign.jpg'); */
+    /* background-size: cover; */
+}
+#menu_body {
+    background-image: url('../webdesign.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* What is inside the body */
+h1, h2, h3{
+    color: color(srgb 0.5 6 8);
+    font-family: 'Branda', Arial, sans-serif;
+  }
+h1, h2, h3{
+    color: var(--color-cyan, cyan);
+}    
+#wrapper{
+    width: 90dvw;
+    margin-top: 3%;
+    margin: 0 auto;
+}
+#wrapper ul{
+    padding: 0;
+    text-align: center;
+}
+#wrapper nav{
+    background-color: var(--color-darkgrey, #696969);
+    border-radius: 20px;
+}
+#wrapper li{
+    list-style-type: none;
+    text-decoration: none;
+    padding: 0;
+}
+#wrapper a{
+    text-decoration: none;
+    color: var(--menu-text, orange);
+    display: block;
+    font-family: 'Tomatoes', Arial, Helvetica, sans-serif;
+    border-radius: 20px;
+    text-align: center;
+    background-color: var(--color-darkgrey, #696969);
+    transition: background-color 1s ease;
+    font-weight: bold;
+}
+#wrapper a:hover{
+    background-color: var(--color-white, white);
+    animation: float 3s ease-in-out infinite;
+}
+
+#bottom_container{
+    position: absolute;
+    width: 50dvw;
+    min-height: 30dvh;
+    bottom:0;
+    right:0;
+}
+#bottom_note{
+    position: absolute;
+    bottom: 0;
+    right:0;
+}
+
+/* Bio section css */
+section:has(p){
+    color: color-mix(in srgb, #34c9eb 25%, white);
+}
+
+#image-frame{
+    grid-area: 1 / 1 / 4 / 3;
+    justify-self: center;
+    align-self: center;
+    padding-left: 10dvw;
+}
+#first_para{
+    grid-area: 1 / 3 / 3 / 6;
+    width: 50dvw;
+    color: color-mix(in srgb, #34c9eb 25%, white);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#second_para{
+    grid-area: 4 / 1 / 6 / 6;
+    width: 80dvw;
+    margin-left: 10dvw;
+    color: color-mix(in srgb, #34c9eb 25%, white);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+#piano{
+    grid-area: 3 / 3 / 4 / 6;
+    align-self: center;
+}
+#picture-me{
+    object-fit: cover;
+    object-position: center top;
+}
+
+/* View work CSS */
+#teamwork_pic{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#teamwork_pic{
+    grid-area: 1 / 1 / 4 / 6;
+    justify-self: center;
+    object-fit: cover;
+    align-self: center;
+}
+#select_form{
+    grid-area: 4 / 2 / 5 / 3;
+    font-family: Arial, Helvetica, sans-serif;
+    align-self: center;
+    justify-self: center;
+}
+#select_submit{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#result_table{
+    align-self: center;
+    justify-self: center;
+    width: 18dvw;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    border: 2px solid var(--color-yellow, yellow);
+}
+#table_header{
+    color: var(--color-blue, #4B0082);
+    background-color: var(--color-yellow, yellow);
+}
+#result_table td{
+    border: 1px solid var(--color-yellow, yellow);
+}
+
+
+/* SKills CSS */
+#skill_set{
+    margin-left: 8%;
+    margin-top: 5%;
+    font-family: 'Branda', Arial, sans-serif;
+    color: color-mix(in srgb, #34c9eb 25%, white);
+}
+
+/* Contact CSS */
+#contact_form, #feed_back_form{
+    color: var(--color-lemon, #FFFACD);
+    margin-left: 5%;
+    margin-top: 3%;
+    font-family: 'Branda', Arial, sans-serif;
+    display: inline-block;
+}
+
+#contact_form fieldset{
+    max-width: 50dvw;
+}
+
+#contact_form textarea{
+    max-width: 50dvw;
+}
+
+
+
+
+/* --------------------------DIFFERENT MEDIA STARTS HERE----------------------------------- */
+/* For different devices */
+/* Desktop */
+@media screen and (min-width: 1280px) {
+
+    #wrapper ul{ 
+        display: flex;
+        align-items: center;
+    }
+    #wrapper li{
+        flex: 1 0 100px;        
+    }
+    #wrapper a{
+        padding: 20px;
+    }
+    #wrapper nav{
+        width: 90dvw;
+    }
+
+    /* Bio section  */
+    #first_para{
+        font-size: 28px;
+        padding: 20px;
+    }
+    #second_para {
+        font-size: 28px;
+        padding: 20px;
+    }
+    #bio_introduction{
+        display: grid;
+        grid-template-rows: 346px 346px 96px 346px 346px;
+        grid-template-columns: repeat(5, 19dvw);
+    }
+    #piano{
+        width: 40dvw;
+        height: 5dvh;
+    }
+
+    /* View work section */
+    #team_work{
+        display: grid;
+        grid-template-rows: repeat(5, 19dvh);
+        grid-template-columns: repeat(5, 19dvw);
+        color: var(--color-white, white);
+        margin: 0 auto;
+    }
+    #result_table{
+        grid-area: 4 / 3 / 5 / 6;
+    }
+    #select_form, #result_table{
+        font-size: 25px;
+    }
+    
+    /* Skill Set section */
+    #skill_set{
+        font-size: 23px;
+    }
+    #skill_set_header{
+        font-size: 27px;
+    }
+    
+
+    /* Contact CSS */
+    #contact_form, #feed_back_form{
+        font-size: 20px;
+    }
+    #feed_back_form input{
+        width: 5dvw;
+    }
+
+}
+
+/* Tablet */
+@media screen and (min-width: 601px) and (max-width: 1279px){
+    h1, h2, h3{
+        font-size: 20px;
+    }
+    #wrapper ul{ 
+        display: flex;
+        align-items: center;
+    }
+    #wrapper li{
+        flex: 1 0 90px;        
+    }
+    #wrapper a{
+        padding: 20px;
+    }
+    #wrapper nav{
+        width: 90dvw;
+    }
+    #first_para{
+        font-size: 12px;
+        padding: 10px;
+    }
+    #piano {
+        width: 50dvw;
+        height: 5dvh;
+    }
+    #second_para {
+        font-size: 12px;
+        padding: 10px;
+    }
+    #bio_introduction{
+        display: grid;
+        grid-template-rows: 18dvw 18dvw 5dvw 18dvw 18dvw;
+        grid-template-columns: repeat(5, 19dvw);
+    }
+
+    /* ViewWork CSS */
+    #team_work{
+        display: grid;
+        grid-template-rows: repeat(5, 19dvh);
+        grid-template-columns: repeat(5, 19dvw);
+        color: var(--color-white, white);
+        margin: 0 auto;
+    }
+    #select_form, #result_table{
+        font-size: 18px;
+    }
+    #result_table{
+        grid-area: 4 / 3 / 5 / 6;
+    }
+
+    /* Skill Set section */
+    #skill_set{
+        font-size: 20px;
+    }
+    #skill_set_header{
+        font-size: 24px;
+    }
+
+     /* Contact CSS */
+     #contact_form, #feed_back_form{
+        font-size: 15px;
+    }
+    #feed_back_form input{
+        width: 3dvw;
+    }
+
+} 
+/* For Phone users */
+@media screen and (min-width: 360px) and (max-width: 600px){
+    #wrapper a{
+        width: 30dvw;
+        margin: 0 auto;
+        padding: 10px;
+        font-size: 20px;
+    }
+    h1, h2, h3{
+        font-size: 20px;
+    }
+    #bio_introduction{
+        display: grid;
+        grid-template-rows: 18dvh 18dvh 5dvh 18dvw 18dvh;
+        grid-template-columns: repeat(5, 19dvw);
+    }
+    #piano {
+        width: 50dvw;
+        height: 3dvh;
+    }
+    #first_para{
+        font-size: 11px;
+    }
+    #second_para{
+        font-size: 11px;;
+    }
+
+    /* ViewWork CSS */
+    #team_work{
+        display: grid;
+        grid-template-rows: repeat(5, 20dvw);
+        grid-template-columns: repeat(5, 20dvw);
+        color: var(--color-white, white);
+        margin: 0 auto;
+    }
+    #select_form{
+        grid-area: 4 / 1 / 5 / 3;
+        text-align: center;
+    }
+    #result_table{
+        grid-area: 4 / 3 / 5 / 6;
+    }
+    #select_form, #result_table{
+        font-size: 12px;
+    }
+    /* Skill Set section */
+    #skill_set{
+        font-size: 21px;
+    }
+    #skill_set_header{
+        font-size: 24px;
+    }
+
+
+    /* Contact CSS */
+    #contact_form, #feed_back_form{
+        font-size: 12px;
+    }
+    #feed_back_form input{
+        width: 2dvw;
+    }
+
+}
