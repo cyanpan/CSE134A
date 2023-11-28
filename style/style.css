@@ -231,6 +231,11 @@ section:has(p){
     max-width: 50dvw;
 }
 
+#contact_me{
+    font-family: 'Branda', Arial, sans-serif;
+    color: var(--color-lemon, #FFFACD);
+}
+
 /* Handling The Error */
 input:user-invalid{
     border: 2px solid red;
@@ -250,6 +255,16 @@ border: 2px solid red;
     margin-left: 2%;
 }
 
+.jsRequired{
+    display: none;
+}
+
+ /* New Added */
+.error {
+    opacity: 1;
+    color:red;
+    transition: opacity 2s ease-out;
+  }
 /* Counting fonts in Comments
 #warning {
     color: orange;

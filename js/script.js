@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       setTimeout(function () {
         outputName.style.opacity = 0;
-      }, 4000);
+      }, 2000);
 
     }
 
@@ -281,7 +281,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       setTimeout(function () {
         outputEmail.style.opacity = 0; 
-      }, 4000);
+      }, 2000);
     }
 
     else{
@@ -319,7 +319,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       setTimeout(function () {
         outputComments.style.opacity = 0; 
-      }, 4000);
+      }, 2000);
     }
 
     else{
@@ -371,11 +371,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Retrieve the theme from localStorage
-  var savedTheme = localStorage.getItem('theme');
+  
+  let savedTheme = localStorage.getItem('theme');
 
-  // If a theme is saved, set it; otherwise, use the default (black)
+  
   document.body.style.backgroundColor = savedTheme || 'black';
+
+  // Show the JS content
+  let jsDependentElements = document.querySelectorAll('.jsRequired');
+  jsDependentElements.forEach(function(element) {
+    element.style.display = 'block';
+  });
 });
 
 function toggleTheme() {
@@ -391,4 +397,5 @@ function toggleTheme() {
     newColor = 'black';
   }
   localStorage.setItem('theme', newColor);
+
 }
