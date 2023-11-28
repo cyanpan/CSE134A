@@ -10,7 +10,7 @@
   </head>
 
   <body>
-
+      <button onclick="toggleTheme()" id="toggle_button">Theme</button>
       <section id = "wrapper">
         <nav>
           <ul>
@@ -27,25 +27,37 @@
             <p>Please feel free to contact me! Fill out the <code>form</code> below!</p>
             <br>
 
-            <form id="form">
+            <form id="form" action="https://httpbin.org/post" method="post">
                 <fieldset>
-                    <legend>Your Information</legend>
-                    <label for="fname"> First Name:</label>
-                    <input type="text" id="fname" name="fname">
-                    <br>
-                    <label for="lname"> Last Name:</label>
-                    <input type="text" id="lname" name="lname">
-                </fieldset>
+                  <legend>Your Information</legend>
+                  <label for="name"> Name: (Required)</label> 
+                  <input type="text" id="name" name="name" required maxlength="50">
+                  <output for="name" class="error"></output>
 
-                <p><label for="message">Message Input: </label></p>
-                <textarea id="message" name="message" rows="4" cols="50"> </textarea>
-                <br>
-                <input type="submit" value="Send">
-                <button type="button">Reset</button>
+                  
+                  <label for="email"> Email: (Required)</label> 
+                  <input type="text" id="email" name="email" required pattern="[a-zA-Z0-9_]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}" maxlength="50">
+                  <output for="email" class="error"></output>
+                  
+                
+
+                  <label for="comments">Comments: (Required)</label> 
+                  <textarea id="comments" name="comments" rows="4" cols="50" required maxlength="200"></textarea>
+                  <output for="comments" class="error"></output>
+                  <output for="comments" id="info"></output>
+                  
+
+                  <input type="hidden" name="possible_bot" id="possible_bot" value="true">
+
+                  <button id="su" type="submit" onclick="validateForm()">Submit</button>
+                  <button id="re" type="button">Reset</button>
+              </fieldset>
+              
+              <output id="success"></output>
             </form>
 
         </div>
-
+        <script src="js/script.js"></script>
         <br>
 
         <section id="feed_back_form">

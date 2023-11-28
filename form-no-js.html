@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Here is Me, Cyan Pan</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style/style.css" type="text/css">
+    
+    <style>
+      @font-face {
+    font-family: 'Branda';
+    src: url('Branda-yolq.ttf') format('truetype');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Tomatoes';
+    src: url('Tomatoes-O8L8.ttf') format('truetype');
+}
+@keyframes float {
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
+:root{
+    --menu-text: orange;
+    --color-white: white;
+    --color-black: black;
+    --color-silver: silver;
+    --color-lemon: #FFFACD;
+    --color-blue: #4B0082;
+    --color-yellow: yellow;
+    --color-darkgrey: #696969;
+    --color-cyan: cyan;
+
+}
+
+body, #menu_body{
+    position:relative;
+    margin: 0;
+    padding: 0;
+    min-height: 90dvh;
+    background-color: var(--color-black, black);
+    /* background-image: url('../webdesign.jpg'); */
+    /* background-size: cover; */
+}
+#menu_body {
+    background-image: url('../webdesign.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* What is inside the body */
+h1, h2, h3{
+    color: color(srgb 0.5 6 8);
+    font-family: 'Branda', Arial, sans-serif;
+  }
+h1, h2, h3{
+    color: var(--color-cyan, cyan);
+}    
+#wrapper{
+    width: 90dvw;
+    margin-top: 3%;
+    margin: 0 auto;
+}
+#wrapper ul{
+    padding: 0;
+    text-align: center;
+}
+#wrapper nav{
+    background-color: var(--color-darkgrey, #696969);
+    border-radius: 20px;
+}
+#wrapper li{
+    list-style-type: none;
+    text-decoration: none;
+    padding: 0;
+}
+#wrapper a{
+    text-decoration: none;
+    color: var(--menu-text, orange);
+    display: block;
+    font-family: 'Tomatoes', Arial, Helvetica, sans-serif;
+    border-radius: 20px;
+    text-align: center;
+    background-color: var(--color-darkgrey, #696969);
+    transition: background-color 1s ease;
+    font-weight: bold;
+}
+#wrapper a:hover{
+    background-color: var(--color-white, white);
+    animation: float 3s ease-in-out infinite;
+}
+
+#bottom_container{
+    position: absolute;
+    width: 50dvw;
+    min-height: 30vh;
+    bottom:0;
+    right:0;
+}
+#bottom_note{
+    position: absolute;
+    bottom: 0;
+    right:0;
+}
+       #contact_form, #feed_back_form{
+        color: var(--color-lemon, #FFFACD);
+        margin-left: 5%;
+        margin-top: 3%;
+        font-family: 'Branda', Arial, sans-serif;
+        display: inline-block;
+    }
+
+    #contact_form fieldset{
+        max-width: 50dvw;
+        display: grid;
+        gap: 10px;
+        margin: 0 auto;
+    }
+
+    #form label{
+        grid-column: 1 / span 2;
+        margin-bottom: 5px;
+        
+    }
+
+    #form input, textarea{
+        grid-column: 1 / span 2;
+        padding: 8px;
+        /* border: 1px solid white; */
+        border-radius: 3px;
+    }
+
+    #su{
+        grid-column: 1 / span 2;
+        background-color: #4caf50;
+        color: white;
+        cursor: pointer;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 3px;
+    }
+
+    #re{
+        grid-column: 1 / span 2;
+        background-color: grey;
+        cursor: pointer;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 3px;
+    }
+
+    input:user-invalid{
+      border: 2px solid red;
+    }
+
+    #comments:user-invalid{
+      border: 2px solid red;
+    }
+
+    #name:user-invalid + output::before {
+      content: "Name cannot be empty(50 characters max)";
+      color: red;
+    }
+
+    #email:user-invalid + output::before {
+      content: "Please enter correct format(ex: hello@gmail.com)";
+      color: red;
+    }
+
+    #comments:user-invalid + output::before {
+      content: "Comments cannot be empty Or has invalid character";
+      color: red;
+    }
+
+    #contact_form textarea{
+        max-width: 50dvw;
+    }
+
+    </style>
+  </head>
+
+  <body>
+
+      <section id = "wrapper">
+        <nav>
+          <ul>
+            <li><a class="menu_item" href="index.html">Home</a> </li>
+            <li><a class="menu_item" href="view_works.html">View Works</a> </li>
+            <li><a class="menu_item" href="bio.html">Bio</a> </li>
+            <li><a class="menu_item" href="skills.html">Skill/Experience</a> </li>
+            <li><a class="menu_item" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </section>
+
+        <div id="contact_form">
+            <p>Please feel free to contact me! Fill out the <code>form</code> below!</p>
+            <br>
+
+            <form id="form" action="https://httpbin.org/post" method="post">
+                <fieldset>
+                  <legend>Your Information</legend>
+                  <label for="name"> Name: (Required)</label> 
+                  <input type="text" id="name" name="name" required pattern="[a-zA-Z0-9\s]*" maxlength="50"> <output id="name_span"></output>
+                  <output for="name" class="error"></output>
+
+                  
+                  <label for="email"> Email: (Required)</label> 
+                  <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9_]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}" maxlength="50"> <output id="email_span"></output>
+                  <output for="email" class="error"></output>
+                  
+                
+
+                  <label for="comments">Comments: (Required)</label> 
+                  <input type="text" id="comments" name="comments" required pattern="[a-zA-Z0-9@!.,?:;\s]*" maxlength="200"> <output id="comment_span"></output>
+                  <output for="comments" class="error"></output>
+                  
+
+                  <input type="hidden" name="possible_bot" id="possible_bot" value="true">
+
+                  <button id="su" type="submit">Submit</button>
+                  <button id="re" type="button">Reset</button>
+              </fieldset>
+              
+              <output id="success"></output>
+            </form>
+
+        </div>
+
+        <br>
+
+        <section id="feed_back_form">
+            <p>Please provide a short feedback for this current website!</p>
+            <label for="feedback">I found this website to be </label>
+            <input list="feedbacks" name="feedback" id="feedback">
+
+            <datalist id="feedbacks">
+                <option value="Great">
+                <option value="Good">
+                <option value="Meh">
+                <option value="You need some extra work">
+            </datalist>
+        </section>
+
+        <br>
+          
+  </body>
+</html>

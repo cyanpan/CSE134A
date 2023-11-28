@@ -36,7 +36,7 @@ body, #menu_body{
     margin: 0;
     padding: 0;
     min-height: 90dvh;
-    background-color: var(--color-black, black);
+    background-color: black; */
     /* background-image: url('../webdesign.jpg'); */
     /* background-size: cover; */
 }
@@ -177,20 +177,88 @@ section:has(p){
 
 /* Contact CSS */
 #contact_form, #feed_back_form{
-    color: var(--color-lemon, #FFFACD);
     margin-left: 5%;
     margin-top: 3%;
-    font-family: 'Branda', Arial, sans-serif;
     display: inline-block;
+}
+
+#form legend, label{
+    font-family: 'Branda', Arial, sans-serif;
+    color: var(--color-lemon, #FFFACD);
 }
 
 #contact_form fieldset{
     max-width: 50dvw;
+    display: grid;
+    gap: 10px;
+    margin: 0 auto;
+}
+
+#form label{
+    grid-column: 1 / span 2;
+    margin-bottom: 5px;
+    
+}
+
+#form input, textarea{
+    grid-column: 1 / span 2;
+    padding: 8px;
+    /* border: 1px solid white; */
+    border-radius: 3px;
+}
+
+#su{
+    grid-column: 1 / span 2;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+}
+
+#re{
+    grid-column: 1 / span 2;
+    background-color: grey;
+    cursor: pointer;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
 }
 
 #contact_form textarea{
     max-width: 50dvw;
 }
+
+/* Handling The Error */
+input:user-invalid{
+    border: 2px solid red;
+  }
+
+#comments:user-invalid{
+border: 2px solid red;
+}
+
+#toggle_button{
+    background-color: orange;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    border-radius: 20px;
+    margin-top: 1%;
+    margin-left: 2%;
+}
+
+/* Counting fonts in Comments
+#warning {
+    color: orange;
+}
+#maxx{
+    color: red;
+} */
+
+
 
 
 
@@ -353,6 +421,7 @@ section:has(p){
     #feed_back_form input{
         width: 3dvw;
     }
+
 
 } 
 /* For Phone users */
