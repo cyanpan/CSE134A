@@ -150,6 +150,29 @@ function validateForm() {
     }
   }
 
+    // FINAL EDITING
+  // const formData = {
+  //   form_errors
+  // };
+
+  // Use Fetch API to send data to httpbin
+  fetch('https://httpbin.org/post', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({form_errors})
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log('Response from httpbin:', data);
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+
+  //Edit ends here
+
   if(commentInput.checkValidity() && nameInput.checkValidity() && emailInput.checkValidity() && final_name && final_email && final_comments) {
     goodSubmit.textContent = 'SUCCESS SUBMITTED!';
     goodSubmit.style.color = 'green';
@@ -157,38 +180,22 @@ function validateForm() {
 
 
     //Sending Error Array to JSON
-    if(form_errors.length > 0) {
+    //if(form_errors.length > 0) {
 
-      let formErrorsJSON = JSON.stringify(form_errors);
+      // let formErrorsJSON = JSON.stringify(form_errors);
      
 
-      let hiddenInput = document.createElement('input');
-      hiddenInput.type = 'hidden';
-      hiddenInput.name = 'form-errors';
-      hiddenInput.value = formErrorsJSON;
+      // let hiddenInput = document.createElement('input');
+      // hiddenInput.type = 'hidden';
+      // hiddenInput.name = 'form-errors';
+      // hiddenInput.value = formErrorsJSON;
 
-      document.getElementById('form').appendChild(hiddenInput);
+      // document.getElementById('form').appendChild(hiddenInput);
 
       // Submit the form
       //document.getElementById('form').submit();
-
-      // let formData = { formErrors: form_errors };
-
-      //   // Use fetch to send the JSON object to httpbin
-      //   fetch('https://httpbin.org/post', {
-      //     method: 'POST',
-      //     headers: {
-      //       'Content-Type': 'application/json',
-      //     },
-      //     body: JSON.stringify(formData),
-      //   })
-      //   .then(response => response.json())
-      //   .then(data => {
-      //     console.log('Response from httpbin:', data);
-      //     // Handle the response as needed
-      //   })
-      //   .catch(error => console.error('Error:', error));
-    }
+      
+    //}
   }
 
 }
